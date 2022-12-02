@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 int F(int n) {
-printf("Hi! This program prints the result of a polymonals.\nBy Nima Honarmand\nSharif University of Technology")
+printf("Hi! This program prints the result of a polymonals.\nBy Nima Honarmand")
 	int a;
 	int m = 2;
 	int total = 0;
