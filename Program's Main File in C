@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 int F(int n) {
+printf("Hi! This program prints the result of a polymonals.")
 	int a;
 	int m = 2;
 	int total = 0;
