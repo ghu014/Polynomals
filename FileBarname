@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <math.h>
+int F(int n) {
+	int a;
+	int m = 2;
+	int total = 0;
+	while (1) {
+		char b;
+		a = 0;
+		char c;
+		char d;
+		int e;
+		char f;
+		char g;
+		scanf_s("%d", &a);
+		if (a != 0) {
+			scanf_s(" %c", &b); //b haman '*' ast
+			scanf_s(" %c", &c); //c haman 'x' ast
+			scanf_s(" %c", &d); //d haman '^' ast
+			scanf_s("%d", &e); //e haman tavan ast
+			total = total + pow(-1, m) * (a * pow(n, e));
+		}
+
+		if (a == 0) {
+			scanf_s(" %c", &b);
+			if (b == '*') {
+				scanf_s(" %c", &c);
+				scanf_s(" %c", &d);
+				scanf_s("%d", &e);
+				total = total + 0;
+			}
+			if (b == 'x') {
+				scanf_s(" %c", &d);
+				scanf_s("%d", &e);
+				total = total + pow(-1, m) * pow(n, e);
+			}
+
+		}
+		scanf_s("%c", &g);
+		if (g == '\n') {
+			break;
+		}
+		scanf_s("%c", &f);
+		if (f == '+') {
+			m = 2;
+		}
+		else if (f == '-') {
+			m = 1;
+		}
+	}
+	return(total);
+}
+int main() {
+	int n;
+	scanf_s("%d", &n);
+	int x = F(n);
+	printf("%d", x);
+	return 0;
+}
